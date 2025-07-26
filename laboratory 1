@@ -1,0 +1,97 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMOX9xtoq+Jp+C3FvpW3p9m",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/markangeltalagtag/CPE-201L-DSA-2-A/blob/main/laboratory%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "D33rjc7TgOJX",
+        "outputId": "d221e896-d00d-4fa9-d4e4-a419789909a7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Name: Triangle\n",
+            "Sides: 3\n",
+            "Area: 15.5\n",
+            "\n",
+            "Updated Polygon:\n",
+            "Name: Square\n",
+            "Sides: 4\n",
+            "Area: 25.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "class Polygons:\n",
+        "    def __init__(self, name: str, sides: int, area: float):\n",
+        "        self._name = name\n",
+        "        self._sides = sides\n",
+        "        self._area = area\n",
+        "\n",
+        "    def set_name(self, name: str):\n",
+        "        self._name = name\n",
+        "\n",
+        "    def set_sides(self, sides: int):\n",
+        "        self._sides = sides\n",
+        "\n",
+        "    def set_area(self, area: float):\n",
+        "        self._area = area\n",
+        "\n",
+        "    def get_name(self) -> str:\n",
+        "        return self._name\n",
+        "\n",
+        "    def get_sides(self) -> int:\n",
+        "        return self._sides\n",
+        "\n",
+        "    def get_area(self) -> float:\n",
+        "        return self._area\n",
+        "\n",
+        "polygon1 = Polygons(\"Triangle\", 3, 15.5)\n",
+        "\n",
+        "print(\"Name:\", polygon1.get_name())\n",
+        "print(\"Sides:\", polygon1.get_sides())\n",
+        "print(\"Area:\", polygon1.get_area())\n",
+        "\n",
+        "polygon1.set_name(\"Square\")\n",
+        "polygon1.set_sides(4)\n",
+        "polygon1.set_area(25.0)\n",
+        "\n",
+        "print(\"\\nUpdated Polygon:\")\n",
+        "print(\"Name:\", polygon1.get_name())\n",
+        "print(\"Sides:\", polygon1.get_sides())\n",
+        "print(\"Area:\", polygon1.get_area())\n"
+      ]
+    }
+  ]
+}
